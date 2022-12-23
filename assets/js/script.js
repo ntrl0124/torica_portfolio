@@ -33,10 +33,10 @@ document.documentElement.classList.add('is-loaded');
   let navSwitch = false;
 
   const navToggle = () => {
+    closeModalAction();
     if(navSwitch) {
       navBtn.classList.remove("is-active");
       navBody.classList.remove("is-active");
-      document.documentElement.classList.remove("is-fixed");
       navSwitch = false;
       stopCanvas();
     } else {
@@ -46,7 +46,6 @@ document.documentElement.classList.add('is-loaded');
       navSwitch = true;
       update();
     }
-    closeModalAction();
   }
 
   navBtn.addEventListener("click", navToggle);
