@@ -294,7 +294,7 @@ const todayYear = today.getFullYear(),
 years.forEach((box) => {
   const startYear = box.getAttribute("data-year"),
         startMonth = box.getAttribute("data-month");
-  const outputYear = Math.max(todayYear - startYear,0);
+  const outputYear = Math.max(todayYear - startYear - 1,0);
   const outputMonth = Math.max(todayMonth - startMonth,1);
   let boxContent;
 
@@ -339,7 +339,7 @@ async function getWorks() {
   document.getElementById("category_business").setAttribute("data-target",res.category_business);
   document.getElementById("category_recruit").setAttribute("data-target",res.category_recruit);
   document.getElementById("category_mock").setAttribute("data-target",res.category_mock);
-  //document.getElementById("category_other").setAttribute("data-target",res.category_other);
+  document.getElementById("category_mail").setAttribute("data-target",res.category_mail);
 
 
   //「2017/10～***時点の統計」
